@@ -1,0 +1,11 @@
+# Server Configuration Example (For Instructor Reference)
+
+# Port for the Express server to run on
+PORT=5000
+
+# MongoDB Connection String (Replace with your actual Atlas/local URI)
+# Use the placeholder format below:
+MONGO_URI=mongodb+srv://<username>:<password>@cluster0.gu0ldrf.mongodb.net/mern-blog?retryWrites=true&w=majority
+
+# Secret key used to sign and verify JSON Web Tokens (JWTs)
+JWT_SECRET=super-secure-random-key-for-jwt-signing-0123456789

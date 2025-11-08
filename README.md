@@ -1,3 +1,104 @@
+
+
+
+
+
+
+
+
+# MERN Stack Blog Application
+
+This project implements a full-stack blog platform using the MERN (MongoDB, Express.js, React.js, Node.js) stack, demonstrating seamless integration, secure authentication, and advanced features including file uploads and dynamic querying.
+
+## Project Overview
+
+This application fulfills all requirements for **Week 4: Deep Dive into MERN Stack Integration**, showcasing complete CRUD operations for Posts and Categories, robust user authentication, and advanced features designed for a production environment.
+
+## ⚙️ Setup Instructions
+
+### Prerequisites
+* Node.js (v18+)
+* MongoDB (Atlas or Local Instance)
+* Access to the project's repository (via GitHub Classroom assignment).
+
+### Backend Setup (server)
+
+1.  Navigate to the `server` directory: `cd server`
+2.  Install dependencies: `npm install`
+3.  **Configure Environment:** Create a file named `.env` in the `server` directory. Copy the contents of `.env.example` into your new `.env` file and replace the placeholder values (e.g., `<username>`, `<password>`) with your actual credentials.
+4.  Start the server: `npm run dev`
+
+### Frontend Setup (client)
+
+1.  Navigate to the `client` directory: `cd client`
+2.  Install dependencies: `npm install`
+3.  Start the client: `npm run dev`
+
+The React app will run on `http://localhost:5173`, and API calls will be automatically proxied to the backend on port 5000 via the `vite.config.js` proxy.
+
+## 💡 API Documentation (Key Endpoints)
+
+All endpoints are prefixed with `/api`. Authorization requires a valid JWT in the `Authorization: Bearer <token>` header for private routes.
+
+| Method | Endpoint | Description | Access |
+| :--- | :--- | :--- | :--- |
+| **POST** | `/api/auth/register` | Creates a new user. | Public |
+| **POST** | `/api/auth/login` | Authenticates a user and returns a JWT. | Public |
+| **GET** | `/api/posts` | Fetches posts with **Search, Filter, & Pagination**. Accepts `?search`, `?category`, `?page`, `?limit`. | Public |
+| **POST** | `/api/posts` | Creates a new post (requires body validation). | **Private** (Author) |
+| **PUT** | `/api/posts/:id` | Updates an existing post. | **Private** (Author) |
+| **DELETE** | `/api/posts/:id` | Deletes a post. | **Private** (Author) |
+| **POST** | `/api/posts/:id/comments` | Adds a new comment to a post. | **Private** (User) |
+| **GET** | `/api/posts/:id/comments` | Fetches all comments for a post. | Public |
+| **POST** | `/api/upload` | Uploads a featured image file via `multer`. | Private |
+
+## ✨ Features Implemented (Task Completion)
+
+This project successfully implemented all required and advanced features:
+
+1.  **User Authentication & Authorization:** Complete registration/login flow using JWT. Post creation, updating, and deletion are restricted to the original authenticated author (`isAuthor` check).
+2.  **Core CRUD Operations:** Full management for Posts (`/api/posts`) and Categories (`/api/categories`).
+3.  **Image Uploads:** Implemented using **`multer`** middleware to handle `multipart/form-data` and save files to the static `/uploads` folder.
+4.  **Searching & Filtering:** The `GET /api/posts` controller uses MongoDB `$regex` for powerful, case-insensitive searching and filtering by category ID.
+5.  **Pagination:** The backend returns limited post data, and the frontend renders interactive **Previous/Next** controls.
+6.  **Comments:** Fully functional nested resource (`/api/posts/:id/comments`) with a dedicated `Comment` model and integrated submission form on the post detail page.
+
+
+
+## 🖼️ Screenshots
+
+### 1. Homepage & Search
+* **Purpose:** Verifies Pagination and Search/Filtering controls are functional.
+* ![Homepage View](screenshots/01_homepage_search.png)
+
+### 2. Post Detail & Authorization
+* **Purpose:** Verifies that the Edit and Delete buttons are visible only to the authenticated author.
+* ![Post Detail Page](screenshots/02_post_detail_auth.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # MERN Stack Integration Assignment
 
 This assignment focuses on building a full-stack MERN (MongoDB, Express.js, React.js, Node.js) application that demonstrates seamless integration between front-end and back-end components.
