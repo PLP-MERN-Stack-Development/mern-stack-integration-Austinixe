@@ -1,0 +1,18 @@
+body {
+    /* Sets standard margins to zero */
+    margin: 0;
+    
+    /* Retains the default font stack */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+
+    /* 🔑 THE BACKGROUND COLOR FIX 🔑 */
+    background-color: #FFFFFF /* Light off-white */
+}
+
+/* Recommended: Centers the main application container */
+#root {
+    max-width: 1200px; 
+    margin: 0 auto;
+}

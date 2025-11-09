@@ -1,11 +1,3 @@
-
-
-
-
-
-
-
-
 # MERN Stack Blog Application
 
 This project implements a full-stack blog platform using the MERN (MongoDB, Express.js, React.js, Node.js) stack, demonstrating seamless integration, secure authentication, and advanced features including file uploads and dynamic querying.
@@ -63,33 +55,23 @@ This project successfully implemented all required and advanced features:
 5.  **Pagination:** The backend returns limited post data, and the frontend renders interactive **Previous/Next** controls.
 6.  **Comments:** Fully functional nested resource (`/api/posts/:id/comments`) with a dedicated `Comment` model and integrated submission form on the post detail page.
 
+## 🧑‍💻 Author
+
+This MERN Stack Blog Application was developed and integrated by:
+
+* **Name:** [Your Name Here]
+* **GitHub:** [Austinixe]
 
 
 ## 🖼️ Screenshots
 
 ### 1. Homepage & Search
 * **Purpose:** Verifies Pagination and Search/Filtering controls are functional.
-* ![Homepage View](screenshots/01_homepage_search.png)
+* ![Homepage View](screenshots/homepage.JPG)
 
 ### 2. Post Detail & Authorization
 * **Purpose:** Verifies that the Edit and Delete buttons are visible only to the authenticated author.
-* ![Post Detail Page](screenshots/02_post_detail_auth.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+* ![Post Detail Page](screenshots/post_details.JPG)
 
 
 
